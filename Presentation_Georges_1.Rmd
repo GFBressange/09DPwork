@@ -77,8 +77,8 @@ plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG")
 
 ## New slide commit 2
 
-```{r}
-data(iris, echo = TRUE)
+```{r, echo = TRUE}
+data(iris)
 plot(iris$Species, iris$Sepal.Length)
 ```
 
