@@ -1,0 +1,43 @@
+---
+title: "Leaflet examples"
+author: "G. Bressange"
+date: "December 22, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## First approach
+
+Creating a map without knowing any javascript.
+
+```{r, echo = FALSE}
+library(leaflet)
+my_map <- leaflet() %>%
+        addTiles()
+my_map
+```
+
+
+## Adding markers
+
+```{r, echo = FALSE}
+library(leaflet)
+my_map <- my_map %>%
+        addMarkers(lat = 39.2980803, lng = -76.5898801,
+                   popup = "Jeff Leek's Office")
+my_map
+```
+
+## Exemple avec Tours
+
+
+```{r, echo = FALSE}
+library(leaflet)
+my_map <- my_map %>%
+        addMarkers(lat = 47.3940379, lng = 0.6760878999999704, # Tours rue Alleron ...
+                   popup = "Jeff Leek's Office")
+my_map
+```
